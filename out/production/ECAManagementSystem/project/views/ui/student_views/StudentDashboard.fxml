@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="568.0" prefWidth="828.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="studentName" layoutX="38.0" layoutY="17.0" style="-fx-alignment: center; -fx-font-family: Montserrat; -fx-font-size: 30px; -fx-font-weight: bold;" text="Name" />
+      <Label fx:id="uiuID" layoutX="38.0" layoutY="61.0" style="-fx-font-family: Montserrat; -fx-font-style: italic;" text="UIU ID" />
+      <Button layoutX="698.0" layoutY="26.0" mnemonicParsing="false" onAction="#onLogoutAction" prefHeight="30.0" prefWidth="83.0" style="-fx-alignment: center; -fx-background-color: orange; -fx-font-weight: bold; -fx-font-family: Montserrat; -fx-font-size: 14px; -fx-cursor: hand;" text="Log Out" textFill="WHITE" />
+      <TabPane fx:id="tabPane" layoutY="90.0" prefHeight="478.0" prefWidth="828.0" rotateGraphic="true" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab fx:id="myCFTab" style="-fx-background-color: orange; -fx-text-fill: white; -fx-cursor: hand; -fx-border-color: white; -fx-border-width: 2px; -fx-border-radius: 3px;" text="My Clubs/Forums">
+                <content>
+                    <AnchorPane prefHeight="419.0" prefWidth="775.0" style="-fx-background-color: white;">
+                        <children>
+                            <TableView fx:id="cfTable" layoutX="46.0" layoutY="55.0" prefHeight="294.0" prefWidth="750.0">
+                                <columns>
+                                    <TableColumn fx:id="cfNameColumn" prefWidth="284.7999954223633" style="-fx-font-family: Montserrat; -fx-alignment: center;" text="Club/Forum Name" />
+                                    <TableColumn fx:id="cfDesignationColumn" prefWidth="174.4000244140625" style="-fx-font-family: Montserrat; -fx-alignment: center;" text="Designation" />
+                                    <TableColumn fx:id="cfDepartmentCol" prefWidth="174.4000244140625" style="-fx-font-family: Montserrat; -fx-alignment: center;" text="Department" />
+                              <TableColumn fx:id="feeColumn" prefWidth="114.39999999999998" style="-fx-font-family: Montserrat; -fx-alignment: center;" text="Fees" />
+                                </columns>
+                            </TableView>
+                        </children>
+                    </AnchorPane>
+                </content>
+            </Tab>
+            <Tab fx:id="myTasksTab" style="-fx-background-color: orange; -fx-text-fill: white; -fx-cursor: hand; -fx-border-color: white; -fx-border-width: 2px; -fx-border-radius: 3px;" text="My tasks">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="369.0" layoutY="378.0" mnemonicParsing="false" onAction="#onUpdateTasksAction" prefHeight="30.0" prefWidth="83.0" style="-fx-alignment: center; -fx-background-color: orange; -fx-font-weight: bold; -fx-font-family: Montserrat; -fx-font-size: 14px; -fx-cursor: hand;" text="Update" textFill="WHITE" />
+                        <Label fx:id="tasksLabel" layoutX="322.0" layoutY="36.0" style="-fx-font-family: Montserrat;" text="No assigned tasks remaining!" />
+                        <ListView fx:id="tasksList" layoutX="151.0" layoutY="69.0" prefHeight="270.0" prefWidth="519.0" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="myAnnouncementTab" text="My Announcements">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Accordion fx:id="announcementAccordion" layoutX="4.0" prefHeight="283.0" prefWidth="818.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="joinCFTab" style="-fx-background-color: orange; -fx-text-fill: white; -fx-cursor: hand; -fx-border-color: white; -fx-border-width: 2px; -fx-border-radius: 3px;" text="Join a Club/Forum">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="225.0" layoutY="112.0" style="-fx-font-family: Montserrat;" text="Search for Club/Forum:" />
+                        <ChoiceBox fx:id="cfSelectorList" layoutX="378.0" layoutY="107.0" prefHeight="26.0" prefWidth="210.0" />
+                        <Label layoutX="225.0" layoutY="165.0" style="-fx-font-family: Montserrat;" text="Enter your reason for joining:" />
+                        <Button fx:id="joinBtn" layoutX="292.0" layoutY="312.0" mnemonicParsing="false" onAction="#onJoinRequestAction" prefHeight="30.0" prefWidth="244.0" style="-fx-alignment: center; -fx-background-color: orange; -fx-font-weight: bold; -fx-font-family: Montserrat; -fx-font-size: 12px; -fx-cursor: hand;" text="Join" textFill="WHITE" />
+                        <Label fx:id="joinStatusLabel" layoutX="148.0" layoutY="271.0" prefHeight="30.0" prefWidth="532.0" style="-fx-alignment: center; -fx-font-family: Montserrat;" textFill="#1a9426" wrapText="true" />
+                        <TextArea fx:id="joinReasonTextArea" layoutX="225.0" layoutY="188.0" prefHeight="75.0" prefWidth="364.0" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="updateInfoTab" style="-fx-background-color: orange; -fx-text-fill: white; -fx-cursor: hand; -fx-border-color: white; -fx-border-width: 2px; -fx-border-radius: 3px;" text="Update my information">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="295.0" layoutY="164.0" style="-fx-font-family: Montserrat;" text="Set new email:" />
+                        <Label layoutX="270.0" layoutY="244.0" style="-fx-font-family: Montserrat;" text="Set new password:" />
+                        <TextField fx:id="newEmailField" layoutX="396.0" layoutY="159.0" prefHeight="26.0" prefWidth="240.0" style="-fx-font-family: Montserrat;" />
+                        <PasswordField fx:id="newPasswordField" layoutX="397.0" layoutY="239.0" prefHeight="26.0" prefWidth="239.0" style="-fx-font-family: Montserrat;" />
+                        <Button layoutX="296.0" layoutY="316.0" mnemonicParsing="false" onAction="#onUpdateDetailsAction" prefHeight="30.0" prefWidth="237.0" style="-fx-alignment: center; -fx-background-color: orange; -fx-font-weight: bold; -fx-font-family: Montserrat; -fx-font-size: 14px; -fx-cursor: hand;" text="Update my information" textFill="WHITE" />
+                        <Label layoutX="235.0" layoutY="204.0" style="-fx-font-family: Montserrat;" text="Set new phone number:" />
+                        <TextField fx:id="newPhoneNumberField" layoutX="396.0" layoutY="199.0" prefHeight="26.0" prefWidth="240.0" style="-fx-font-family: Montserrat;" />
+                        <Label layoutX="268.0" layoutY="124.0" style="-fx-font-family: Montserrat;" text="Set new username:" />
+                        <TextField fx:id="newUsernameField" layoutX="396.0" layoutY="119.0" prefHeight="26.0" prefWidth="241.0" style="-fx-font-family: Montserrat;" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="478.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="38.0" layoutY="23.0" prefHeight="22.0" prefWidth="42.0" style="-fx-font-family: Montserrat; -fx-font-size: 13px;" text="Task:" />
+      <Label fx:id="taskName" layoutX="77.0" layoutY="24.0" prefHeight="22.0" prefWidth="475.0" style="-fx-font-family: Montserrat; -fx-font-size: 13px;" />
+      <Label layoutX="38.0" layoutY="57.0" prefHeight="22.0" prefWidth="75.0" style="-fx-font-family: Montserrat; -fx-font-size: 13px;" text="Assignee:" />
+      <Label fx:id="assigneeName" layoutX="108.0" layoutY="58.0" prefHeight="22.0" prefWidth="456.0" style="-fx-font-family: Montserrat; -fx-font-size: 12px; -fx-font-weight: bold;" />
+      <Label layoutX="38.0" layoutY="117.0" prefHeight="22.0" prefWidth="66.0" style="-fx-font-family: Montserrat; -fx-font-size: 13px;" text="Details:" />
+      <Label fx:id="taskDetails" alignment="TOP_LEFT" layoutX="38.0" layoutY="158.0" prefHeight="282.0" prefWidth="524.0" style="-fx-font-family: Montserrat; -fx-border-color: orange;" wrapText="true" />
+      <Label layoutX="39.0" layoutY="88.0" prefHeight="22.0" prefWidth="75.0" style="-fx-font-family: Montserrat; -fx-font-size: 13px;" text="Deadline:" />
+      <Label fx:id="deadlineLabel" layoutX="109.0" layoutY="89.0" prefHeight="22.0" prefWidth="456.0" style="-fx-font-family: Montserrat; -fx-font-size: 12px; -fx-font-weight: bold;" />
+   </children>
+</AnchorPane>

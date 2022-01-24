@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+
+<AnchorPane prefHeight="543.0" prefWidth="971.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane fx:id="sideAnchorPane" prefHeight="543.0" prefWidth="266.0" style="-fx-background-color: #ee7600;">
+         <children>
+            <Label fx:id="cfName" contentDisplay="TOP" layoutX="23.0" layoutY="206.0" prefHeight="72.0" prefWidth="220.0" style="-fx-font-family: Montserrat; -fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: white;" text="Name" wrapText="true" />
+            <Label layoutX="23.0" layoutY="301.0" style="-fx-font-family: Montserrat; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 13px;" text="Members:" />
+            <Label fx:id="memcountLabel" layoutX="99.0" layoutY="301.0" prefHeight="18.0" prefWidth="53.0" style="-fx-font-family: Montserrat; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 13px;" text="0" />
+            <Button layoutX="57.0" layoutY="372.0" mnemonicParsing="false" onAction="#onSettingsAction" prefHeight="18.0" prefWidth="6.0" style="-fx-background-color: none; -fx-cursor: hand;">
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../resources/Settings-icon-01.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="153.0" layoutY="369.0" mnemonicParsing="false" onAction="#onLogoutAction" prefHeight="18.0" prefWidth="6.0" style="-fx-background-color: none; -fx-cursor: hand;">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../resources/Logout-icon-01.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label layoutX="58.0" layoutY="416.0" style="-fx-font-family: Montserrat; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 11px;" text="Settings" />
+            <Label layoutX="158.0" layoutY="416.0" style="-fx-font-family: Montserrat; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 11px;" text="Log Out" />
+            <Circle fx:id="cfImageHolder" fill="WHITE" layoutX="133.0" layoutY="116.0" radius="75.0" stroke="BLACK" strokeType="INSIDE" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="rndBtn" layoutX="314.0" layoutY="272.0" mnemonicParsing="false" onAction="#onrRnDAction" prefHeight="190.0" prefWidth="287.0" style="-fx-background-color: none; -fx-cursor: hand;">
+         <graphic>
+            <AnchorPane prefHeight="182.0" prefWidth="293.0" style="-fx-background-color: #f5f5f5;">
+               <children>
+                  <Hyperlink layoutX="75.0" layoutY="127.0" style="-fx-alignment: center; -fx-font-family: Montserrat; -fx-text-fill: orange; -fx-font-weight: bold; -fx-font-size: 16px;" text="R &amp; D Services" />
+                  <ImageView fx:id="rndImage" fitHeight="104.0" fitWidth="87.0" layoutX="90.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../resources/rndservices-logo-01.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </graphic>
+      </Button>
+      <Button fx:id="treasuryBtn" layoutX="620.0" layoutY="272.0" mnemonicParsing="false" onAction="#onTreasuryServicesAction" prefHeight="190.0" prefWidth="295.0" style="-fx-background-color: none; -fx-cursor: hand;">
+         <graphic>
+            <AnchorPane prefHeight="178.0" prefWidth="279.0" style="-fx-background-color: #f5f5f5;">
+               <children>
+                  <Hyperlink layoutX="98.0" layoutY="128.0" style="-fx-alignment: center; -fx-font-family: Montserrat; -fx-text-fill: orange; -fx-font-weight: bold; -fx-font-size: 16px;" text="Treasury" />
+                  <ImageView fx:id="mktImage" fitHeight="84.0" fitWidth="80.0" layoutX="103.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../resources/treasurylogo-01.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </graphic>
+      </Button>
+      <Button fx:id="hrBtn" layoutX="314.0" layoutY="78.0" mnemonicParsing="false" onAction="#onHRAction" prefHeight="178.0" prefWidth="287.0" style="-fx-background-color: none; -fx-cursor: hand;">
+         <graphic>
+            <AnchorPane prefHeight="178.0" prefWidth="279.0" style="-fx-background-color: #f5f5f5;">
+               <children>
+                  <Hyperlink layoutX="17.0" layoutY="125.0" style="-fx-alignment: center; -fx-font-family: Montserrat; -fx-text-fill: orange; -fx-font-weight: bold; -fx-font-size: 16px;" text="Human Resources Services" />
+                  <ImageView fx:id="hrImage" fitHeight="110.0" fitWidth="100.0" layoutX="86.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../resources/HRServicesLogo-01.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </graphic>
+      </Button>
+      <Button fx:id="prBtn" layoutX="620.0" layoutY="78.0" mnemonicParsing="false" onAction="#onPRAction" prefHeight="178.0" prefWidth="295.0" style="-fx-background-color: none; -fx-cursor: hand;">
+         <graphic>
+            <AnchorPane prefHeight="178.0" prefWidth="279.0" style="-fx-background-color: #f5f5f5;">
+               <children>
+                  <Hyperlink layoutX="86.0" layoutY="126.0" style="-fx-alignment: center; -fx-font-family: Montserrat; -fx-text-fill: orange; -fx-font-weight: bold; -fx-font-size: 16px;" text="PR Services" />
+                  <ImageView fx:id="prImage" fitHeight="84.0" fitWidth="113.0" layoutX="83.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../resources/PRServicesLogo-01.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

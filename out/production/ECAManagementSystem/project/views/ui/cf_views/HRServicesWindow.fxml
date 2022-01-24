@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="618.0" prefWidth="926.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TabPane fx:id="tabPane" layoutY="63.0" prefHeight="557.0" prefWidth="926.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="viewMembersTab" style="-fx-background-color: orange; -fx-cursor: hand; -fx-border-color: white; -fx-border-width: 2px; -fx-border-radius: 3px;" text="View Members">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="infoTable" layoutX="16.0" layoutY="39.0" prefHeight="374.0" prefWidth="884.0" AnchorPane.bottomAnchor="93.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="39.0">
+                          <columns>
+                              <TableColumn fx:id="enrolIdCol" prefWidth="94.39999008178711" style="-fx-alignment: center;" text="UMID" />
+                            <TableColumn fx:id="IDCol" prefWidth="124.00006103515625" style="-fx-alignment: center;" text="ID" />
+                            <TableColumn fx:id="nameCol" prefWidth="150.3999786376953" style="-fx-alignment: center;" text="Name" />
+                              <TableColumn fx:id="designationCol" prefWidth="134.4000244140625" style="-fx-alignment: center;" text="Designation" />
+                              <TableColumn fx:id="deptCol" prefWidth="116.7999267578125" style="-fx-alignment: center;" text="Department" />
+                              <TableColumn fx:id="phoneCol" minWidth="0.0" prefWidth="117.59991455078125" style="-fx-alignment: center;" text="Phone" />
+                              <TableColumn fx:id="emailCol" minWidth="0.0" prefWidth="152.0001220703125" style="-fx-alignment: center;" text="Email" />
+                          </columns>
+                        </TableView>
+                         <Button fx:id="refreshBtn" layoutX="197.0" layoutY="462.0" mnemonicParsing="false" onAction="#onRefreshBtn" prefHeight="28.0" prefWidth="76.0" style="-fx-background-color: orange; -fx-font-family: Montserrat; -fx-font-weight: bold; -fx-cursor: hand;" text="Refresh" textFill="WHITE">
+                         </Button>
+                        <Button layoutX="643.0" layoutY="461.0" mnemonicParsing="false" onAction="#exportAction" prefHeight="29.0" prefWidth="74.0" style="-fx-background-color: orange; -fx-font-family: Montserrat; -fx-font-weight: bold; -fx-cursor: hand;" text="Export" textFill="WHITE" />
+                        <Button fx:id="recruitmentToggleBtn" layoutX="388.0" layoutY="451.0" mnemonicParsing="false" onAction="#onRecruitmentToggleButtonAction" prefHeight="49.0" prefWidth="165.0" style="-fx-background-color: orange; -fx-font-family: Montserrat; -fx-font-weight: bold; -fx-cursor: hand; -fx-font-size: 12px;" text="START RECRUITMENT" textFill="WHITE" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="updateMembersTab" style="-fx-background-color: orange; -fx-cursor: hand; -fx-border-color: white; -fx-border-width: 2px; -fx-border-radius: 3px;" text="Update Member">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="370.0" layoutY="127.0" style="-fx-font-family: Montserrat;" text="Select UMID:" />
+                        <ChoiceBox fx:id="enrolIdChoiceList" layoutX="482.0" layoutY="122.0" prefHeight="26.0" prefWidth="73.0" />
+                        <Label layoutX="349.0" layoutY="184.0" style="-fx-font-family: Montserrat;" text="Set Designation:" />
+                        <ChoiceBox fx:id="designationChoiceList" layoutX="482.0" layoutY="178.0" prefHeight="26.0" prefWidth="165.0" />
+                        <Label layoutX="348.0" layoutY="239.0" style="-fx-font-family: Montserrat;" text="Set Department:" />
+                        <ChoiceBox fx:id="departmentChoiceList" layoutX="482.0" layoutY="233.0" prefHeight="26.0" prefWidth="165.0" />
+                        <Button layoutX="343.0" layoutY="350.0" mnemonicParsing="false" onAction="#onUpdateMembersAction" prefHeight="30.0" prefWidth="239.0" style="-fx-background-color: orange; -fx-font-family: Montserrat; -fx-font-weight: bold; -fx-cursor: hand;" text="Make changes" textFill="WHITE" />
+                        <Label fx:id="dynamicResponseLabel" layoutX="343.0" layoutY="304.0" prefHeight="15.0" prefWidth="238.0" style="-fx-font-family: Montserrat; -fx-alignment: center;" textFill="#43b938" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="removeMemberTab" style="-fx-background-color: orange; -fx-cursor: hand; -fx-border-color: white; -fx-border-width: 2px; -fx-border-radius: 3px;" text="Remove Member">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="makeChangePasswordLabel1" layoutX="379.0" layoutY="157.0" style="-fx-font-family: Montserrat;" text="Select UMID:" />
+                        <ChoiceBox fx:id="enrolIdSelectorList" layoutX="470.0" layoutY="151.0" prefHeight="26.0" prefWidth="72.0" />
+                        <Label fx:id="memberRemoveLabel" layoutX="114.0" layoutY="196.0" prefHeight="32.0" prefWidth="712.0" style="-fx-font-family: Montserrat; -fx-alignment: center; -fx-font-weight: bold;" />
+                        <Button layoutX="350.0" layoutY="332.0" mnemonicParsing="false" onAction="#onRemoveMembersAction" prefHeight="30.0" prefWidth="239.0" style="-fx-background-color: orange; -fx-font-family: Montserrat; -fx-font-weight: bold; -fx-cursor: hand;" text="Remove Member" textFill="WHITE" />
+                        <Label layoutX="233.0" layoutY="247.0" style="-fx-font-family: Montserrat;" text="Enter password to make this change:" />
+                        <PasswordField fx:id="removeMemberPasswordField" layoutX="470.0" layoutY="241.0" prefHeight="26.0" prefWidth="185.0" promptText="Enter Password" />
+                        <Label fx:id="dynamicResponseLabelRemoveTab" layoutX="124.0" layoutY="297.0" prefHeight="3.0" prefWidth="712.0" style="-fx-font-family: Montserrat; -fx-alignment: center;" />
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="assignTaskTab" style="-fx-background-color: orange; -fx-cursor: hand; -fx-border-color: white; -fx-border-width: 2px; -fx-border-radius: 3px;" text="Assign Tasks">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="enrolIdsLabel" layoutX="301.0" layoutY="110.0" style="-fx-font-family: Montserrat;" text="Select UMID:" />
+                        <ChoiceBox fx:id="enrolIdSelectorListOnAssignTaskTab" layoutX="397.0" layoutY="104.0" prefHeight="26.0" prefWidth="72.0" />
+                        <Label fx:id="memberRemoveLabel1" layoutX="114.0" layoutY="196.0" prefHeight="32.0" prefWidth="712.0" style="-fx-font-family: Montserrat; -fx-alignment: center; -fx-font-weight: bold;" />
+                        <Button layoutX="360.0" layoutY="455.0" mnemonicParsing="false" onAction="#onAssignTaskAction" prefHeight="30.0" prefWidth="239.0" style="-fx-background-color: orange; -fx-font-family: Montserrat; -fx-font-weight: bold; -fx-cursor: hand;" text="Assign Task" textFill="WHITE" />
+                        <Label layoutX="305.0" layoutY="158.0" style="-fx-font-family: Montserrat;" text="Task Name:" />
+                        <TextField fx:id="taskName" layoutX="397.0" layoutY="152.0" prefHeight="26.0" prefWidth="255.0" promptText="Enter task name" style="-fx-font-family: Montserrat;" />
+                        <Label layoutX="304.0" layoutY="197.0" style="-fx-font-family: Montserrat;" text="Task Description:" />
+                        <TextArea fx:id="taskDescription" layoutX="304.0" layoutY="229.0" prefHeight="102.0" prefWidth="351.0" promptText="Enter task description" style="-fx-font-family: Montserrat;" />
+                        <Label fx:id="assignTaskLabel" layoutX="305.0" layoutY="415.0" prefHeight="18.0" prefWidth="350.0" style="-fx-alignment: center; -fx-font-family: Montserrat;" textFill="#2ba924" />
+                        <Label layoutX="304.0" layoutY="372.0" style="-fx-font-family: Montserrat;" text="Task Deadline:" />
+                        <DatePicker fx:id="deadlinePicker" layoutX="407.0" layoutY="367.0" prefHeight="26.0" prefWidth="206.0" />
+                        <CheckBox fx:id="taskIndividualCheckBox" layoutX="313.0" layoutY="51.0" mnemonicParsing="false" text="Assign to individual">
+                           <font>
+                              <Font name="Montserrat Regular" size="12.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox fx:id="taskAllCheckBox" layoutX="489.0" layoutY="51.0" mnemonicParsing="false" text="Assign task to all">
+                           <font>
+                              <Font name="Montserrat Regular" size="12.0" />
+                           </font>
+                        </CheckBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="recheckTaskTab" text="Recheck Tasks">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView fx:id="recheckTasksListView" layoutX="202.0" layoutY="100.0" prefHeight="392.0" prefWidth="522.0" />
+                        <Label layoutX="204.0" layoutY="27.0" text="Re-confirm tasks:">
+                           <font>
+                              <Font name="Montserrat Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="tasksCheckLabel" layoutX="274.0" layoutY="71.0" prefHeight="15.0" prefWidth="378.0" style="-fx-font-family: Montserrat; -fx-alignment: center;" text="No tasks need rechecking right now!" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="addMembersTab" text="Add Members">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView fx:id="memberRequestQueue" layoutX="220.0" layoutY="68.0" prefHeight="410.0" prefWidth="486.0" />
+                        <Label fx:id="membersCountLabel" layoutX="298.0" layoutY="37.0" prefHeight="15.0" prefWidth="329.0" style="-fx-font-family: Montserrat; -fx-alignment: center;" text="No members to be added" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Button layoutX="17.0" layoutY="10.0" mnemonicParsing="false" onAction="#onBackAction" prefHeight="28.0" prefWidth="29.0" style="-fx-background-color: white; -fx-border-color: orange; -fx-border-radius: 5px; -fx-padding: 2px; -fx-cursor: hand; -fx-border-width: 3px;">
+         <graphic>
+            <ImageView fitHeight="33.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../resources/back-arrow-icon.jpg" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="385.0" layoutY="16.0" style="-fx-alignment: center; -fx-font-size: 25px; -fx-font-family: Montserrat; -fx-text-fill: orange; -fx-font-weight: bolder;" text="HR Services" />
+   </children>
+</AnchorPane>

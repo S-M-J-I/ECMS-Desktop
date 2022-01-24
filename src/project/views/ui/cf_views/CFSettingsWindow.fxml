@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="426.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="63.0" layoutY="47.0" style="-fx-font-family: Montserrat; -fx-font-size: 14px; -fx-font-weight: bold;" text="Customize Departments:" />
+      <CheckBox fx:id="hrCheckBox" layoutX="63.0" layoutY="88.0" mnemonicParsing="false" selected="true" style="-fx-font-family: Montserrat;" text="Human Resources (HR)" />
+      <CheckBox fx:id="prCheckBox" layoutX="63.0" layoutY="172.0" mnemonicParsing="false" selected="true" style="-fx-font-family: Montserrat;" text="Public Relations (PR)" />
+      <CheckBox fx:id="rndCheckBox" layoutX="300.0" layoutY="172.0" mnemonicParsing="false" style="-fx-font-family: Montserrat;" text="Research &amp; Development (R&amp;D)" />
+      <CheckBox fx:id="treasuryCheckBox" layoutX="299.0" layoutY="88.0" mnemonicParsing="false" style="-fx-font-family: Montserrat;" text="Treasury" />
+      <Separator layoutX="52.0" layoutY="309.0" prefHeight="2.0" prefWidth="496.0" />
+      <Accordion layoutX="281.0" layoutY="253.0" />
+      <Accordion />
+      <Button layoutX="238.0" layoutY="365.0" mnemonicParsing="false" onAction="#onChangesAction" prefHeight="30.0" prefWidth="123.0" style="-fx-background-color: orange; -fx-font-family: Montserrat; -fx-font-weight: bold; -fx-cursor: hand;" text="Make Changes" textFill="WHITE" />
+      <Label fx:id="changesLabel" layoutX="125.0" layoutY="330.0" prefHeight="18.0" prefWidth="350.0" style="-fx-alignment: center; -fx-font-family: Montserrat;" textFill="#2ba924" />
+      <TextField fx:id="hrDepartmentPasswordField" layoutX="63.0" layoutY="115.0" prefHeight="26.0" prefWidth="194.0" promptText="Set hr dept. password" />
+      <TextField fx:id="prDepartmentPasswordField" layoutX="63.0" layoutY="198.0" prefHeight="26.0" prefWidth="194.0" promptText="Set pr dept. password" />
+      <TextField fx:id="treasuryDepartmentPasswordField" layoutX="300.0" layoutY="115.0" prefHeight="26.0" prefWidth="194.0" promptText="Set treasury dept. password" />
+      <TextField fx:id="rndDepartmentPasswordField" layoutX="300.0" layoutY="198.0" prefHeight="26.0" prefWidth="194.0" promptText="Set r&amp;d dept. password" />
+      <Label layoutX="63.0" layoutY="263.0" text="Enter profile image:">
+         <font>
+            <Font name="Montserrat Regular" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="cfPpath" layoutX="194.0" layoutY="258.0" prefHeight="26.0" prefWidth="172.0" promptText="Select profile image" />
+      <Button layoutX="379.0" layoutY="255.0" mnemonicParsing="false" onAction="#onBrowseAction" prefHeight="30.0" prefWidth="72.0" style="-fx-background-color: orange; -fx-font-family: Montserrat; -fx-font-weight: bold; -fx-cursor: hand;" text="Browse" textFill="WHITE" />
+   </children>
+</AnchorPane>

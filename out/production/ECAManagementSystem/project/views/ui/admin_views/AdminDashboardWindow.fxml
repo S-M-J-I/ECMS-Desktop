@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="530.0" prefWidth="834.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="70.0" layoutY="32.0" style="-fx-font-family: Montserrat; -fx-font-size: 25px;" text="Welcome" />
+      <Label fx:id="adminName" layoutX="208.0" layoutY="32.0" style="-fx-font-family: Montserrat; -fx-font-size: 25px; -fx-font-weight: bold;" text="Admin" />
+      <Button layoutX="703.0" layoutY="29.0" mnemonicParsing="false" onAction="#onLogoutAction" prefHeight="37.0" prefWidth="89.0" style="-fx-alignment: center; -fx-background-color: orange; -fx-font-weight: bold; -fx-font-family: Montserrat; -fx-font-size: 14px; -fx-cursor: hand;" text="Log Out" textFill="WHITE" />
+      <TabPane fx:id="tabPane" layoutY="99.0" prefHeight="488.0" prefWidth="834.0" style="-fx-border-color: orange; -fx-border-width: 2px;" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="registerCFTab" style="-fx-background-color: orange; -fx-cursor: hand; -fx-border-color: white; -fx-border-width: 2px; -fx-border-radius: 3px;" text="Register a Club/Forum">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="442.0" prefWidth="829.0">
+                     <children>
+                        <Label layoutX="66.0" layoutY="111.0" style="-fx-font-family: Montserrat;" text="Club or Forum name:" />
+                        <Label layoutX="81.0" layoutY="203.0" style="-fx-font-family: Montserrat;" text="Register password:" />
+                        <TextField fx:id="cfName" layoutX="208.0" layoutY="106.0" prefHeight="26.0" prefWidth="183.0" promptText="Enter new club or forum name" />
+                        <TextField fx:id="cfPassword" layoutX="208.0" layoutY="198.0" prefHeight="26.0" prefWidth="183.0" promptText="Register password" />
+                        <Button layoutX="259.0" layoutY="354.0" mnemonicParsing="false" onAction="#onRegisterAction" prefHeight="30.0" prefWidth="310.0" style="-fx-font-family: Montserrat; -fx-background-color: orange; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 15px; -fx-cursor: hand;" text="Register" />
+                        <TextField fx:id="usernameField" layoutX="208.0" layoutY="151.0" prefHeight="26.0" prefWidth="182.0" promptText="Enter identity username" />
+                        <Label layoutX="94.0" layoutY="156.0" style="-fx-font-family: Montserrat;" text="Enter username:" />
+                        <Label layoutX="34.0" layoutY="250.0" style="-fx-font-family: Montserrat;" text="Register settings password:" />
+                        <TextField fx:id="cfJoinPassword" layoutX="208.0" layoutY="245.0" prefHeight="26.0" prefWidth="183.0" promptText="Register settings password" />
+                        <Label fx:id="successLabel" layoutX="259.0" layoutY="320.0" prefHeight="18.0" prefWidth="309.0" style="-fx-alignment: center; -fx-font-family: Montserrat;" textFill="#41b421" />
+                        <CheckBox fx:id="hrCheckBox" disable="true" layoutX="439.0" layoutY="109.0" mnemonicParsing="false" selected="true" text="HR Department">
+                           <font>
+                              <Font name="Montserrat Regular" size="12.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox fx:id="prCheckbox" disable="true" layoutX="439.0" layoutY="152.0" mnemonicParsing="false" selected="true" text="PR Department">
+                           <font>
+                              <Font name="Montserrat Regular" size="12.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox fx:id="rndCheckbox" layoutX="439.0" layoutY="202.0" mnemonicParsing="false" text="R&amp;D Department">
+                           <font>
+                              <Font name="Montserrat Regular" size="12.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox fx:id="treasuryCheckbox" layoutX="439.0" layoutY="248.0" mnemonicParsing="false" text="Treasury Department">
+                           <font>
+                              <Font name="Montserrat Regular" size="12.0" />
+                           </font>
+                        </CheckBox>
+                        <TextField fx:id="hrPasswordField" layoutX="577.0" layoutY="104.0" prefHeight="26.0" prefWidth="199.0" promptText="Set password for HR department" />
+                        <TextField fx:id="prPasswordField" layoutX="577.0" layoutY="147.0" prefHeight="26.0" prefWidth="198.0" promptText="Set password for PR department" />
+                        <TextField fx:id="rndPasswordField" layoutX="576.0" layoutY="197.0" prefHeight="26.0" prefWidth="200.0" promptText="Set password for R&amp;D department" />
+                        <Separator layoutX="412.0" layoutY="36.0" orientation="VERTICAL" prefHeight="257.0" prefWidth="4.0" />
+                        <TextField fx:id="treasuryPasswordField" layoutX="602.0" layoutY="243.0" prefHeight="26.0" prefWidth="192.0" promptText="Set password for treasury department" />
+                        <Label layoutX="144.0" layoutY="52.0" style="-fx-font-family: Montserrat; -fx-font-size: 14; -fx-font-weight: bold;" text="General Information" />
+                        <Label layoutX="521.0" layoutY="52.0" style="-fx-font-family: Montserrat; -fx-font-size: 14; -fx-font-weight: bold;" text="Department Information" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="updateCFTab" style="-fx-background-color: orange; -fx-cursor: hand; -fx-border-color: white; -fx-border-width: 2px; -fx-border-radius: 3px;" text="Update information of a Club/Forum">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="244.0" layoutY="175.0" style="-fx-font-family: Montserrat;" text="Club or Forum name:" />
+                        <Label layoutX="259.0" layoutY="239.0" style="-fx-font-family: Montserrat;" text="Register password:" />
+                        <TextField fx:id="cfNewName" layoutX="385.0" layoutY="170.0" prefHeight="26.0" prefWidth="183.0" promptText="Enter new name" />
+                        <TextField fx:id="cfNewPassword" layoutX="385.0" layoutY="234.0" prefHeight="26.0" prefWidth="183.0" promptText="Register new password" />
+                        <Button layoutX="259.0" layoutY="304.0" mnemonicParsing="false" onAction="#onUpdateAction" prefHeight="30.0" prefWidth="310.0" style="-fx-font-family: Montserrat; -fx-background-color: orange; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 15px; -fx-cursor: hand;" text="Update Information" />
+                        <ChoiceBox fx:id="cfChoiceMenu" layoutX="385.0" layoutY="94.0" prefHeight="26.0" prefWidth="183.0" />
+                        <Label layoutX="255.0" layoutY="99.0" style="-fx-font-family: Montserrat;" text="Select Club/Forum:" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="removeCFTab" style="-fx-background-color: orange; -fx-cursor: hand; -fx-border-color: white; -fx-border-width: 2px; -fx-border-radius: 3px;" text="Remove a Club/Forum">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ChoiceBox fx:id="cfRemoveChoiceMenu" layoutX="387.0" layoutY="168.0" prefHeight="26.0" prefWidth="183.0" />
+                        <Label layoutX="258.0" layoutY="173.0" style="-fx-font-family: Montserrat;" text="Select Club/Forum:" />
+                        <Button layoutX="259.0" layoutY="251.0" mnemonicParsing="false" onAction="#onRemoveCFAction" prefHeight="30.0" prefWidth="310.0" style="-fx-font-family: Montserrat; -fx-background-color: orange; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 15px; -fx-cursor: hand;" text="Remove" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

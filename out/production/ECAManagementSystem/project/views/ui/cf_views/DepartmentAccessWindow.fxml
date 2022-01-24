@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="215.0" prefWidth="460.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="departmentIndicatorLabel" layoutX="73.0" layoutY="22.0" prefHeight="24.0" prefWidth="313.0" style="-fx-alignment: center;" text="Label">
+         <font>
+            <Font name="Montserrat Regular" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="34.0" layoutY="87.0" prefHeight="24.0" prefWidth="155.0" text="Department Password:">
+         <font>
+            <Font name="Montserrat Regular" size="13.0" />
+         </font>
+      </Label>
+      <Button layoutX="194.0" layoutY="163.0" mnemonicParsing="false" onAction="#onAccessBtnAction" prefHeight="26.0" prefWidth="68.0" style="-fx-alignment: center; -fx-background-color: orange; -fx-text-fill: white; -fx-font-weight: bold;" text="Access">
+         <font>
+            <Font name="Montserrat Regular" size="12.0" />
+         </font>
+      </Button>
+      <Label fx:id="successLabel" layoutX="85.0" layoutY="127.0" prefHeight="24.0" prefWidth="285.0" style="-fx-alignment: center;">
+         <font>
+            <Font name="Montserrat Regular" size="11.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="accessDeptPasswordField" layoutX="194.0" layoutY="86.0" prefHeight="26.0" prefWidth="238.0" promptText="Enter department password" />
+   </children>
+</AnchorPane>
