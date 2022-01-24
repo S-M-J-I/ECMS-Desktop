@@ -1,5 +1,10 @@
 # ECA Management System
 
+### Made by "Team Apocalypse":
+- [S M Jishanul Islam](https://github.com/S-M-J-I)
+- [Sadia Ahmmed](https://github.com/sadia-ahmmed)
+- [Sahid Hossain Mustakim](https://github.com/sratul35)
+
 ### Description
 A desktop application designed to serve the co-curricular  uses of students, clubs and forums, and admins of United International University. This desktop application brings all three parties to a single platform.
 
@@ -34,3 +39,6 @@ Develop your skills by completing due tasks!
 - JavaFX Scenebuilder
 - MySQL
 - Apache POI
+- [TrayNotification](https://github.com/PlusHaze/TrayNotification)
+
+©Team Apocalypse: [S M Jishanul Islam](https://github.com/S-M-J-I), [Sadia Ahmmed](https://github.com/sadia-ahmmed), and [Sahid Hossain Mustakim](https://github.com/sratul35), 2022.
