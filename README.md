@@ -8,9 +8,9 @@
 ### Description
 A desktop application designed to create a comprehensive system for managing the co-curricular activities of students, clubs and forums, and admins of United International University. This desktop application interconnects three parties to a single platform forming a centralized zone to ensure efficient and smooth workflow. 
 
-###Context: 
+### Context: 
 This application is developed to solve the problems and simplify the procedures that we found daunting in our forum life. Moreover, we have also conducted some surveys to analyze the difficulties faced by the students and the students bodies. In addition, many students who are devoted to academics thinks co-curricular activities as a trouble because of the time consuming inefficient system. 
-###Problem Analysis: 
+### Problem Analysis: 
 - No automated system for managing the club activities
 - Excessive dependence on social media
 - Inefficient or No Data management system. 
@@ -18,10 +18,10 @@ This application is developed to solve the problems and simplify the procedures 
 - Extremely time-consuming and confusing joining procedure for students 
 - Regular activities are very lengthy and slow
 
-###Problem Statement:  No digitally automated centralized system to ensure efficient workflow
+### Problem Statement:  No digitally automated centralized system to ensure efficient workflow
 
-###Our Solution :
-####A comprehensive co-curricular activity management system
+### Our Solution :
+#### A comprehensive co-curricular activity management system
 - Makes lengthy processes short in **3-4** easy steps
 - Totally automated 
 - Provides a shared central system for easier access of resources
@@ -29,7 +29,7 @@ This application is developed to solve the problems and simplify the procedures 
 - Includes financial and data management systems.
 
 
-###Features for the concerned parties:
+### Features for the concerned parties:
 ##### For Clubs and Forums:
 - Tools to manage members
 - Customizable forum dashboard 
