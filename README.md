@@ -29,33 +29,28 @@ This application is developed to solve the problems and simplify the procedures 
 - Includes financial and data management systems.
 
 
-### Features for the concerned parties:
+### Features:
 ##### For Clubs and Forums:
-- Tools to manage members
-- Customizable forum dashboard 
-- Form departments to divide the work and monitor them accordingly
-- Run different public relations and marketing campaign for the forum 
-- Services to assign and oversee the tasks of the members 
-- Manage and filter all sort of financial transactions 
-- Real time Announcement system including push notification to notify the members about the activities
-- Find the analysis of the overall efficiency of the forum or club 
+- A comprehensive member management system, allowing for easy organization and communication with members.
+- A customizable forum dashboard for streamlined organization and navigation.
+- The ability to form departments within the forum for more efficient work distribution and monitoring.
+- A variety of tools for running public relations and marketing campaigns.
+- A task management system for assigning and overseeing tasks for members.
+- Financial transaction management and filtering capabilities.
+- A real-time announcement system, including push notifications, to keep members informed of club/forum activities.
+- Analytics and metrics for measuring the overall efficiency and effectiveness of the club/forum.
 
 ##### For Students:
-- Tools to manage the co-curricular activities
-- Easy way to request for joining a club/forum 
-- Personal Dashboard to view and maintain their co-curricular activities
-- Receive realtime announcements to keep up to date with your clubs or forum.
-- Complete Task Assignment system 
-  - Get the tasks assigned 
-  - separate sections for viewing the task assigned by different clubs
-  - View the assigned task details and 
-  - Notify the completion of the tasks
+- Tools for managing co-curricular activities, including an easy way to request membership in clubs/forums.
+- A personal dashboard for viewing and maintaining their co-curricular activities.
+- Real-time announcements to stay up-to-date with club/forum activities.
+- A comprehensive task assignment system, including the ability to view assigned tasks, separate sections for tasks assigned by different clubs/forums, and the ability to notify the completion of tasks.
+
 
 ##### For Admins:
-- Register official bodies of Clubs and Forums.
-- Remove any Club or Forums 
-- Interact with all Clubs and Forums.
-
+- The ability to register official bodies of clubs and forums.
+- The ability to remove any club or forum.
+- Interaction capabilities with all clubs and forums.
 
 ### Guide for the Students:
 
